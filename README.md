@@ -1,0 +1,1 @@
+This is an app I am creating to manage sprite editing for DS/GBA size sprites. I might expand on this later to cover a larger range of hardware, but right now it will be a tool to create or convert image files to be a GBA/NDS, similar to GRIT (hopefully).

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <p id="testP">Not Connected...</p>
+
+    <script>
+        var ws = new WebSocket('ws://' + window.location.hostname +':40510');
+
+        // event emmited when connected
+        ws.onopen = function () {
+            console.log('websocket is connected ...')
+
+            // sending a send event to websocket server
+
+
+            ws.send(JSON.stringify({
+                type: 'userRegister',
+                username: ''
+            }));
+
+            document.getElementById('testP').innerText = "CONNECTED!!!";
+        }
+
+        // event emmited when receiving message
+        ws.onmessage = function (ev) {
+            console.log(ev);
+        }
+        ws.onclose = function (e) {
+            console.log ('closed');
+            document.getElementById('testP').innerText = "websocket closed";
+        }
+    </script>
+  </body>
+</html>
