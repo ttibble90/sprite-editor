@@ -17,6 +17,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
+    "@angular-devkit/build-angular": "^0.13.5",
     "electron": "^2.0.0"
   },
   "dependencies": {
