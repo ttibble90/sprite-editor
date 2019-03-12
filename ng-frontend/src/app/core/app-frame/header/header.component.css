@@ -1,0 +1,9 @@
+.appMainToolbar {
+  display: flex;
+  height: 35px;
+
+}
+
+.fillerSpan {
+  flex: 1 1 auto;
+}
