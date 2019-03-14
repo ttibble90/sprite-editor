@@ -5,8 +5,16 @@ import { HeaderComponent } from './app-frame/header/header.component';
 import { FooterComponent } from './app-frame/footer/footer.component';
 import { SidenavLeftComponent } from './app-frame/sidenav-left/sidenav-left.component';
 import { SidenavRightComponent } from './app-frame/sidenav-right/sidenav-right.component';
-import {MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule} from "@angular/material";
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatList,
+  MatListModule,
+  MatSidenavModule,
+  MatToolbarModule
+} from "@angular/material";
 import {MainCanvasModule} from "../modules/main-canvas/main-canvas.module";
+import {PaletteModule} from "../modules/palette/palette.module";
 
 @NgModule({
   declarations: [
@@ -22,7 +30,11 @@ import {MainCanvasModule} from "../modules/main-canvas/main-canvas.module";
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    PaletteModule
+
+
   ],
   exports: [
     AppFrameComponent,
@@ -30,7 +42,10 @@ import {MainCanvasModule} from "../modules/main-canvas/main-canvas.module";
     FooterComponent,
     SidenavLeftComponent,
     SidenavRightComponent,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    PaletteModule
+
   ]
 })
 export class CoreModule {
