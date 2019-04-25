@@ -1,0 +1,22 @@
+<div>
+    <button mat-icon-button (click)="setTool(toolType.PENCIL)" [ngClass]="{selected: selectedTool === toolType.PENCIL}" >
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button (click)="setTool('erase')" [ngClass]="{selected: selectedTool === 'erase'}">
+      <mat-icon>format_color_reset</mat-icon>
+    </button>
+    <button mat-icon-button (click)="setTool('fill')" [ngClass]="{selected: selectedTool === 'fill'}">
+      <mat-icon>format_color_fill</mat-icon>
+    </button>
+    <button mat-icon-button (click)="setTool('paint')" [ngClass]="{selected: selectedTool === 'paint'}">
+      <mat-icon>format_paint</mat-icon>
+    </button>
+    <button mat-icon-button (click)="setTool('zoom')" [ngClass]="{selected: selectedTool === 'zoom'}">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button (click)="setTool('picker')" [ngClass]="{selected: selectedTool === 'picker'}">
+      <mat-icon>colorize</mat-icon>
+    </button>
+</div>
+
+<div>{{selectedTool}}</div>

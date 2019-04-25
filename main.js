@@ -22,7 +22,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 800, height: 600});
 
   // and load the index.html of the app.
-  mainWindow.loadFile('ng-frontend/dist/ng-frontend/index.html');
+  mainWindow.loadFile('./ng-frontend/dist/ng-frontend/index.html');
 
   // Open the DevTools.
    mainWindow.webContents.openDevTools()
