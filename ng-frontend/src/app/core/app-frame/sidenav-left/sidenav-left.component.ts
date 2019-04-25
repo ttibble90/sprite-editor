@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavLeftComponent implements OnInit {
 
+  public showPalette : boolean;
+  public showTools : boolean;
+
   constructor() { }
 
   ngOnInit() {
+    this.showTools = true;
+    this.showPalette = true;
   }
 
 }
