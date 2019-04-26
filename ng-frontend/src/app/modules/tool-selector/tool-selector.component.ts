@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ToolType} from "../../shared/enums/tool-type.enum";
+import {PaintTool, ToolType} from "../../shared/classes/paint-tool";
+import {ToolService} from "../../core/services/tool.service";
+
 
 @Component({
   selector: 'app-tool-selector',
@@ -8,16 +10,25 @@ import {ToolType} from "../../shared/enums/tool-type.enum";
 })
 export class ToolSelectorComponent implements OnInit {
 
-  public selectedTool : ToolType;
-  public toolType : ToolType;
-  constructor() { }
+  public selectedTool : PaintTool;
+  public toolTypeEnum;
+  public toolList;
+  constructor(private toolService : ToolService) {
+    this.toolTypeEnum = ToolType;
+  }
 
   ngOnInit() {
+    this.toolList = this.toolService.toolList;
+    this.toolService.toolStream.subscribe((tool)=>{
+      this.selectedTool = tool;
+    })
   }
 
 
 
   public setTool(tool: ToolType){
-    this.selectedTool = tool;
+
+    //this.selectedTool = tool;
+    this.toolService.setTool(tool);
   }
 }
