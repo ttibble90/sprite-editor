@@ -15,6 +15,8 @@ import {
 } from "@angular/material";
 import {MainCanvasModule} from "../modules/main-canvas/main-canvas.module";
 import {PaletteModule} from "../modules/palette/palette.module";
+import {ToolSelectorModule} from "../modules/tool-selector/tool-selector.module";
+import {MaterialModule} from "../modules/material/material.module";
 
 @NgModule({
   declarations: [
@@ -27,12 +29,9 @@ import {PaletteModule} from "../modules/palette/palette.module";
   imports: [
     CommonModule,
     MainCanvasModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    PaletteModule
+    MaterialModule,
+    PaletteModule,
+    ToolSelectorModule
 
 
   ],
@@ -44,8 +43,8 @@ import {PaletteModule} from "../modules/palette/palette.module";
     SidenavRightComponent,
     MatSidenavModule,
     MatListModule,
-    PaletteModule
-
+    PaletteModule,
+    ToolSelectorModule
   ]
 })
 export class CoreModule {

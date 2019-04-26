@@ -1,7 +1,9 @@
 
  <mat-list>
-    <h3 matSubheader id="paletteListTitle"> Palette </h3>
-    <app-palette></app-palette>
+    <h3 matSubheader id="toolSelectorTitle" (click)="showTools= !showTools"> Tools </h3>
+    <app-tool-selector *ngIf="showTools"></app-tool-selector>
+   <h3 matSubheader id="paletteListTitle" (click)="showPalette= !showPalette"> Palette </h3>
+   <app-palette *ngIf="showPalette"></app-palette>
   </mat-list>
 
 

@@ -2,8 +2,11 @@ h3 {
   background-color: #eeeeee;
   padding-top: 4px;
   padding-bottom: 4px;
+  height: 1.5em;
+  border-bottom: 1px solid #dddddd;
+  font-weight: bold;
 }
 
 #paletteListTitle {
-  height: 1.5em;
+
 }

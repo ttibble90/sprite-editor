@@ -1,0 +1,9 @@
+<div>
+    <span *ngFor="let tool of toolList">
+        <button mat-icon-button (click)="setTool(tool.id)" [ngClass]="{selected: selectedTool.id === tool.id}" >
+      <mat-icon>{{tool.id | toolIconPipe}}</mat-icon>
+    </button>
+    </span>
+</div>
+
+<div>{{selectedTool.displayName}}</div>
