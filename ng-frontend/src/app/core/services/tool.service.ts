@@ -8,7 +8,7 @@ import {PaintTool} from "../../shared/classes/paint-tool";
 export class ToolService {
 
   public toolStream : BehaviorSubject <PaintTool>;
-  public toolList : PaintTool[];
+  public toolList : PaintTool[] = [];
   constructor() {
     this.initTools();
     this.toolStream = new BehaviorSubject(this.toolList[0]);
@@ -28,13 +28,11 @@ export class ToolService {
 
 
   private initTools(){
-    this.toolList = [];
-    this.toolList.push(new PaintTool(0, "Pencil", ()=>{}))
-    this.toolList.push(new PaintTool(1, "Eraser", ()=>{}))
-    this.toolList.push(new PaintTool(2, "Paint", ()=>{}))
-    this.toolList.push(new PaintTool(3, "Fill", ()=>{}))
-    this.toolList.push(new PaintTool(4, "Zoom", ()=>{}))
-    this.toolList.push(new PaintTool(5, "Color Picker", ()=>{}))
-
+    this.toolList.push(new PaintTool(0, "Pencil", ()=>{}));
+   this.toolList.push(new PaintTool(1, "Eraser", ()=>{}));
+    this.toolList.push(new PaintTool(2, "Paint", ()=>{}));
+    this.toolList.push(new PaintTool(3, "Fill", ()=>{}));
+    this.toolList.push(new PaintTool(4, "Zoom", ()=>{}));
+    this.toolList.push(new PaintTool(5, "Color Picker", ()=>{}));
   }
 }
